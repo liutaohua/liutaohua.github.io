@@ -83,19 +83,17 @@ basic compress 的压缩单位是 block ，把一个 block 上的数据分析重
 
 hybrid columnar compression 有两种应用场景
 
-   1）Warehouse compression
-
-          主要用于查询比较频繁的应用场景
-          <strong>sql语句</strong>
+1. Warehouse compression<br/>
+主要用于查询比较频繁的应用场景<br/>
+<strong>sql语句</strong>	
 ```sql
 	 --创建表
 	create table test_compress compress for query as select * from user_tables;
 ```
 
-  2)Archive compression
-
-       主要用于数据归档，查询较少的应用场景，对cpu的占用较高
-       <strong>sql语句</strong>
+1. Archive compression<br/>
+主要用于数据归档，查询较少的应用场景，对cpu的占用较高<br/>
+<strong>sql语句</strong> 
 ```sql
 	---创建表
 	create table test_compress compress for archive as select * from user_tables;
